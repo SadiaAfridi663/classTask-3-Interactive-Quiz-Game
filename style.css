@@ -39,3 +39,25 @@
 #options button:hover {
     background-color: #ccc;
 }
+.next-btn {
+    display: flex;
+    justify-content: center;
+}
+#next-btn {
+    background-color: #9f2f9f;
+    color: #fff;
+    padding: 12px 30px;
+    width: 80%;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#next-btn:hover {
+    background-color: #822882;
+    transform: scale(1.05);
+    transition: all 0.4s ease;
+
+}
