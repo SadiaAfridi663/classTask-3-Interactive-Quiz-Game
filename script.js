@@ -48,3 +48,13 @@ function checkAnswer(selectedOptionIndex) {
         alert(`Wrong answer`);
     }
 }
+nextBtnElement.addEventListener("click", () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizData.length) {
+        renderQuestion();
+    } else {
+        alert(`Quiz finished! Your final score is: ${score}`);
+    }
+});
+
+renderQuestion();
