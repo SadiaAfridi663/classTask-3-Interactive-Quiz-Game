@@ -20,3 +20,23 @@ const quizData = [
         correctAnswer: 1
     },
 ];
+let score = 0;
+let currentQuestionIndex = 0;
+
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+const nextBtnElement = document.getElementById("next-btn");
+const scoreElement = document.getElementById("score");
+
+function renderQuestion() {
+    questionElement.textContent = quizData[currentQuestionIndex].question;
+    optionsElement.innerHTML = "";
+    quizData[currentQuestionIndex].options.forEach((option, index) => {
+        const optionButton = document.createElement("button");
+        optionButton.textContent = option;
+        optionButton.addEventListener("click", () => {
+            checkAnswer(index);
+        });
+        optionsElement.appendChild(optionButton);
+    });
+}
