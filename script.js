@@ -40,3 +40,11 @@ function renderQuestion() {
         optionsElement.appendChild(optionButton);
     });
 }
+function checkAnswer(selectedOptionIndex) {
+    if (selectedOptionIndex === quizData[currentQuestionIndex].correctAnswer) {
+        score++;
+        scoreElement.textContent = `Score: ${score}`;
+    } else {
+        alert(`Wrong answer`);
+    }
+}
